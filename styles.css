@@ -1,1 +1,10 @@
 /*  your css code here. If applicable */
+*{
+	background-color:lightsteelblue;
+}
+h1{
+	background-color:black;
+	color:white;
+	text-align:center;
+	border-radius:30px;
+}

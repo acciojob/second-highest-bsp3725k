@@ -7,12 +7,36 @@
 </head>
 
 <body>	
+	<h1>Second Highest Element</h1>
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			let n = arr.length;
+			if(n == 0 || n==1){
+				console.log("-Infinity");
+			}
+			else{
+				if(arr[1]!=arr[0]){
+					let swapped;
+			        for(let i=0;i<n;i++){
+				        swapped false;
+				        for(let j=0;j<n-i-1;j++){
+					         if(arr[j]>arr[j+1]){
+						         (arr[j],arr[j+1])=(arr[j+1],arr[j]);
+						          swapped= true;
+					         }
+				        }
+				       if(!swapped){
+					     break;
+				        }
+			       }
+				   console.log(arr[n-2]);
+				}
+				else{
+					console.log("-Infinity");
+				}
+			 }	
 		}
-
 		function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
@@ -23,10 +47,7 @@
 		}
 		Main();
 	</script>
-
     <script type="text/javascript" src="./script.js">
 </script>
-
 </body>
-
 </html>
