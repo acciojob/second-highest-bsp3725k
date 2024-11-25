@@ -9,20 +9,18 @@
 	<h1>Second Highest Element</h1>
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			let sortedArr = arr.sort();
-		if(arr.length < 2){
-			console.log("-Infinity");
-		}
-		else{
-			if(arr[0]===arr[1] ){
-				console.log("-Infinity");
-			}
-			else{
-				console.log(arr[arr.length-2]);
-			}
-		}
-		}
+      if (arr.length < 2) return -Infinity; // Check if array has fewer than 2 elements
+
+      // Create a Set to remove duplicates and convert back to an array
+      const uniqueArr = [...new Set(arr)];
+
+      if (uniqueArr.length < 2) return -Infinity; // Check if all elements are the same
+
+      // Sort the array in descending order
+      uniqueArr.sort((a, b) => b - a);
+
+      return uniqueArr[1]; // Return the second-highest element
+    }
 		function Main() {
 			var n = prompt("Enter the number of elements:");
 			var arr = [];
